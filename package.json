@@ -54,34 +54,90 @@
   
   ],
   
-  
-  
   "main": "./dist/extension.js",
   
   "contributes": {
   
     
   "activationEvents": [
-    "onCommand:extension.openCustomInput"
-],
-
-    "commands": [
-        {
-            "command": "fileguide.openCustomInput",
-            "title": "Open Custom Input"
-        },
-        {
-            "command": "fileguide.analyzeText",
-            "title": "Analyze Text"
-        }
-    ],
-
-    "capabilities": {
-    "untrustedWorkspaces": {
-      "supported": true
-    }
+  
+    
+    
+  "onCommand:extension.openCustomInput"
+  
+    
+  ],
+  
+    
+  "commands": [
+  
+    
+    
+  {
+  
+    
+    
+    
+  "command": "fileguide.openCustomInput",
+  
+    
+    
+    
+  "title": "Open Custom Input"
+  
+    
+    
   },
-  "permissions": ["fileSystem"]
+  
+    
+    
+  {
+  
+    
+    
+    
+  "command": "fileguide.analyzeText",
+  
+    
+    
+    
+  "title": "Analyze Text"
+  
+    
+    
+  }
+  
+    
+  ],
+  
+    
+  "capabilities": {
+  
+    
+    
+  "untrustedWorkspaces": {
+  
+    
+    
+    
+  "supported": true
+  
+    
+    
+  }
+  
+    
+  },
+  
+    
+  "permissions": [
+  
+    
+    
+  "fileSystem"
+  
+    
+  ]
   
   },
   
@@ -189,6 +245,13 @@
   
     
   "typescript-eslint": "^8.10.0"
+  
+  },
+  
+  "dependencies": {
+  
+    
+  "node-fetch": "^3.3.2"
   
   }
 }

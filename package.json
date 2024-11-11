@@ -144,6 +144,9 @@
   "scripts": {
   
     
+  "build": "tsc",
+  
+    
   "vscode:prepublish": "npm run package",
   
     
@@ -249,6 +252,12 @@
   },
   
   "dependencies": {
+  
+    
+  "cohere-ai": "^7.14.0",
+  
+    
+  "mathjs": "^13.2.0",
   
     
   "node-fetch": "^3.3.2"

@@ -6,10 +6,10 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_community.document_loaders.generic import GenericLoader
 from langchain_community.document_loaders.parsers import LanguageParser
 
-from langchain_cohere import CohereEmbeddings
-from langchain_cohere import ChatCohere
+from langchain_cohere import CohereEmbeddings # type: ignore
+from langchain_cohere import ChatCohere # type: ignore
 
-from langchain_chroma import Chroma
+from langchain_chroma import Chroma # type: ignore
 from langchain.memory import ConversationSummaryBufferMemory
 from langchain.chains import ConversationalRetrievalChain
 from langchain.chains import RetrievalQA
@@ -89,33 +89,11 @@ if os.path.exists('./data'):
 # Initialize Chroma with embeddings and persist settings
 vectordb = Chroma.from_documents(adaptive_texts, embedding=embeddings_model, persist_directory='./data')
 
-
-"""
-user_task_embedding = embeddings_model.embed_query(userTask)
-
-user_task_doc = Document(page_content=userTask, metadata={"source": "userTask"})
-
-vectordb.add_documents([user_task_doc], embedding=user_task_embedding)"""
-
 print("Embeddings successfully stored in vector database.")
-
-
-#results = vectordb.similarity_search(userTask, k=5)  # k=5 is the number of closest matches to retrieve
-#print(results)
-
 
 
 print("Step 5: Initialize the LLM and memory for retrieval chain")
 llm = ChatCohere(cohere_api_key="w4Ud6rr4TcEDEBTEP7OoS6VAWjStj5wCCVsXJxAV", model="command-r-plus-08-2024")
-
-# Set up the conversational memory with the Cohere language model
-# memory = ConversationSummaryBufferMemory(llm=llm, memory_key="chat_history", max_token_limit=1000)
-
-# Set up the conversational retrieval chain without memory
-#qa_chain = ConversationalRetrievalChain.from_llm(
-#    llm=llm,
-#    retriever=vectordb.as_retriever(search_type="mmr")
-#)
 
 qa_chain = RetrievalQA.from_chain_type(
     llm = llm,

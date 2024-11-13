@@ -1,0 +1,80 @@
+{
+    "project": "Connect Four",
+    "description": "c4, stands for Connect Four, is a browser game written in TypeScript and utilizes HTML's canvas. Player is playing against an AI that uses the Minimax algorithm and alpha-beta pruning. The evaluation function is hard-coded, and hence the AI may not be moving using the most optimal move.",
+    "tasks": [
+      {
+        "task_id": 1,
+        "task_description": "Improve AI's decision-making by enhancing the evaluation function.",
+        "files_to_modify": [
+            "C:\\Users\\uc201\\FileGuide\\fileguide\\c4\\core\\src\\player\\player-ai.ts"
+        ],
+        "percentages":[
+            100
+        ]
+      },
+      {
+        "task_id": 2,
+        "task_description": "Implement a new visual effect when a player wins (e.g., flashing winning pieces).",
+        "files_to_modify": [
+            {}
+        ]
+      },
+      {
+        "task_id": 3,
+        "task_description": "Add an option for the player to choose the AI difficulty (easy, medium, hard).",
+        "files_to_modify": [
+            {}
+        ]
+      },
+      {
+        "task_id": 4,
+        "task_description": "Allow players to customize the board size (e.g., from 7x6 to other sizes).",
+        "files_to_modify": [
+            {}
+        ]
+      },
+      {
+        "task_id": 5,
+        "task_description": "Improve performance by optimizing canvas rendering techniques.",
+        "files_to_modify": [
+            {}
+        ]
+      },
+      {
+        "task_id": 6,
+        "task_description": "Refactor code to improve readability and maintainability, especially in AI logic.",
+        "files_to_modify": [
+            {}
+        ]
+      },
+      {
+        "task_id": 7,
+        "task_description": "Add sound effects for placing a piece and for winning the game.",
+        "files_to_modify": [
+            {}
+        ]
+      },
+      {
+        "task_id": 8,
+        "task_description": "Implement a save and load game feature for players to continue later.",
+        "files_to_modify": [
+            {}
+        ]
+      },
+      {
+        "task_id": 9,
+        "task_description": "Create a multiplayer mode allowing two players to play over a network.",
+        "files_to_modify": [
+            {}
+        ]
+      },
+      {
+        "task_id": 10,
+        "task_description": "Add an animated background or theme selection for the game board.",
+        "files_to_modify": [
+            {}
+        ]
+      }
+    ]
+  }
+  

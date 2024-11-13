@@ -8,9 +8,12 @@ from langchain_cohere import ChatCohere  # type: ignore
 from langchain_chroma import Chroma  # type: ignore
 from langchain.chains import RetrievalQA
 from langchain.schema import Document
+import json
 
-project_path = sys.argv[1]
-userTask = sys.argv[2]
+
+
+project_path = 'C:\\Users\\uc201\\FileGuide\\fileguide\\c4'
+userTask = 'Improve AI\'s decision-making by enhancing the evaluation function'
 
 # Initialize loader and load documents
 try:
@@ -52,7 +55,7 @@ for doc in docs:
     try:
         language = get_language_and_chunk_params(doc)
         params = get_chunk_params(len(doc.page_content))
-        documents_splitter = RecursiveCharacterTextSplitter.from_language(language=language, **params)
+        documents_splitter = RecursiveCharacterTextSplitter.from_language(language=language, **params)    
         for chunk in documents_splitter.split_documents([doc]):
             chunk_with_path = f"# File: {doc.metadata['source']}\n{chunk.page_content}"
             adaptive_texts.append(Document(page_content=chunk_with_path, metadata=doc.metadata))

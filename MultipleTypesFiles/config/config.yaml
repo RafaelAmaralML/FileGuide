@@ -1,0 +1,6 @@
+# config.yaml - Sample YAML configuration
+
+app:
+  name: "SampleProject"
+  version: "1.0.0"
+  debug: true

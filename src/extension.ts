@@ -251,7 +251,7 @@ async function processProjectFolder(projectPath: string, userMessage: string): P
     const { exec } = require('child_process');
 
     return new Promise((resolve, reject) => {
-        const command = `python C:\\Users\\uc201\\FileGuide\\fileguide\\src\\analizeProjectV2.py "${projectPath}" "${userMessage}"`;
+        const command = `python C:\\Users\\uc201\\FileGuide\\fileguide\\src\\analizeProjectV3.py "${projectPath}" "${userMessage}"`;
 
         exec(command, (error: Error | null, stdout: string, stderr: string) => {
             if (error) {
@@ -264,7 +264,12 @@ async function processProjectFolder(projectPath: string, userMessage: string): P
 
             }
             console.log(stdout);
-            const lines = stdout.trim().split('\n').slice(3);
+            const lines = stdout.trim().split('\n').filter((line, index, arr) => {
+                // Find the index of the line containing "> Finished chain."
+                const finishedIndex = arr.findIndex(line => line.includes('> Finished chain.'));
+                // Only include lines after the "> Finished chain." line
+                return index > finishedIndex;
+            });
             const results: { filePath: string; percentage: string }[] = [];
 
             lines.forEach(line => {

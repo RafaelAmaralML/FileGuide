@@ -1,0 +1,69 @@
+{
+    "project": "2048",
+    "description": "",
+    "path": "C:\\Users\\uc201\\FileGuide\\fileguide\\Project1",
+    "tasks": [
+      {
+        "task_id": 1,
+        "task_description": "I want to add a new feature to the game, allowing players to undo their last move.",
+        "files_to_modify": [
+                {
+                    "file_path": "C:\\Users\\uc201\\FileGuide\\fileguide\\Project1\\game.py",
+                    "percentage": 100
+                },
+                {
+                    "file_path": "C:\\Users\\uc201\\FileGuide\\fileguide\\Project1\\logic.py",
+                    "percentage": 100
+                }
+            ]
+      },
+      {
+        "task_id": 2,
+        "task_description": "Implement a new feature where the game board can be reset to its initial state, allowing players to start over without closing the game.",
+        "files_to_modify": [
+                {
+                    "file_path": "C:\\Users\\uc201\\FileGuide\\fileguide\\Project1\\game.py",
+                    "percentage": 100
+                },
+                {
+                    "file_path": "C:\\Users\\uc201\\FileGuide\\fileguide\\Project1\\logic.py",
+                    "percentage": 100
+                }
+            ]
+      },
+      {
+        "task_id": 3,
+        "task_description": "I want to change the logic of the down movement.",
+        "files_to_modify": [
+                {
+                    "file_path": "C:\\Users\\uc201\\FileGuide\\fileguide\\Project1\\game.py",
+                    "percentage": 100
+                },
+                {
+                    "file_path": "C:\\Users\\uc201\\FileGuide\\fileguide\\Project1\\logic.py",
+                    "percentage": 100
+                }
+            ]
+      },
+      {
+        "task_id": 4,
+        "task_description": "I want to change the keys that need to be pressed in order to do a up movement.",
+        "files_to_modify": [
+                {
+                    "file_path": "C:\\Users\\uc201\\FileGuide\\fileguide\\Project1\\game.py",
+                    "percentage": 100
+                },
+                {
+                    "file_path": "C:\\Users\\uc201\\FileGuide\\fileguide\\Project1\\logic.py",
+                    "percentage": 100
+                }
+            ]
+      },
+      {
+        "task_id": 5,
+        "task_description": "I want to go mars.",
+        "files_to_modify": []
+      }
+    ]
+  }
+  
